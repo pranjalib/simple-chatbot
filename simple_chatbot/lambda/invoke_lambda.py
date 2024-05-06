@@ -2,11 +2,6 @@ import random
 import boto3
 import json
 
-# Initialize the Bedrock client
-bedrock = boto3.client('bedrock', region_name='us-east-1')
-# Initialize the Bedrock Runtime client
-bedrock_runtime = boto3.client('bedrock-runtime', region_name='us-east-1')
-
 def handler(event, context):
     
     
@@ -53,6 +48,11 @@ def reserve_cabana_request_handler():
     return random.choice([False, True])
 
 def query_amenity_details(user_input):
+    
+    # Initialize the Bedrock client
+    bedrock = boto3.client('bedrock', region_name='us-east-1')
+    # Initialize the Bedrock Runtime client
+    bedrock_runtime = boto3.client('bedrock-runtime', region_name='us-east-1')
     foundation_models = bedrock.list_foundation_models()
     matching_model = next((model for model in foundation_models["modelSummaries"]
                     if model.get("modelName") == "Jurassic-2 Ultra"), None)
