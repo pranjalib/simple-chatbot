@@ -61,7 +61,7 @@ def query_amenity_details(user_input):
     prompt = f"""Answer question using the following context:
 
         Context:
-        Fitness center: Details regarding hours of operation and accessibility are not specified on the website.
+        Fitness center: Our fitness center is open to the guests 24 hours a day.
         Lounge: Lounge access is included with the stay.
         Free WiFi: Free high-speed WiFi is available throughout the hotel.
         Digital Key: Allows guests to use their smartphone or digital device as a room key.
