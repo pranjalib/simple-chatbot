@@ -103,7 +103,7 @@ class SimpleChatbotStack(Stack):
                                     utterance="towels"
                     ),
                     CfnBot.SampleUtteranceProperty(
-                                    utterance="Send number of towels"
+                                    utterance="Send towels"
                     ),
                 ],
                 fulfillment_code_hook=CfnBot.FulfillmentCodeHookSettingProperty(
@@ -215,7 +215,7 @@ class SimpleChatbotStack(Stack):
                         code_hook_specification=CfnBotAlias.CodeHookSpecificationProperty(
                             lambda_code_hook=CfnBotAlias.LambdaCodeHookProperty(
                                 code_hook_interface_version="1.0",
-                                lambda_arn=lambda_function.function_arn ## lambda arn -- need to fill
+                                lambda_arn=lambda_function.function_arn
                             )
                         )
                     ),
